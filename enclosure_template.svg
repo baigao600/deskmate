@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="240mm" height="560mm" viewBox="0 0 240 560">
+  <style>
+    .cut { stroke:#111; stroke-width:0.6; fill:none; }
+    .hole { stroke:#d32f2f; stroke-width:0.7; fill:none; stroke-dasharray:3 2; }
+    .ref  { stroke:#999; stroke-width:0.35; fill:none; stroke-dasharray:2 2; }
+    .dim  { stroke:#1976d2; stroke-width:0.3; fill:none; }
+    .txt  { font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif; font-size:3.4px; fill:#111; }
+    .small{ font-family:"Microsoft YaHei",Arial,sans-serif; font-size:2.8px; fill:#555; }
+    .red  { font-family:"Microsoft YaHei",Arial,sans-serif; font-size:2.8px; fill:#d32f2f; }
+    .title{ font-family:"Microsoft YaHei",Arial,sans-serif; font-size:5px; fill:#111; font-weight:bold; }
+  </style>
+
+  <!-- ================= 标题 ================= -->
+  <text x="10" y="14" class="title">DeskMate Pro 纸板外壳裁切模板（单位 mm，打印时选 100% / 实际大小）</text>
+  <text x="10" y="20" class="small">实线=裁剪线；红色虚线=开孔（近似，请用真板描边校准）；灰色虚线=板子参考轮廓</text>
+
+  <!-- ================= 1. 前面板 ================= -->
+  <g transform="translate(10,30)">
+    <!-- 面板外轮廓 -->
+    <rect x="0" y="0" width="193" height="132" class="cut"/>
+    <!-- 板子参考轮廓（177x116，四边各留 8mm） -->
+    <rect x="8" y="8" width="177" height="116" class="ref"/>
+
+    <!-- 开孔（近似位置） -->
+    <!-- OLED 显示窗 -->
+    <rect x="22" y="20" width="28" height="14" class="hole"/>
+    <text x="22" y="18" class="red">OLED 显示窗 ≈28×14</text>
+    <!-- 旋钮 -->
+    <circle cx="162" cy="36" r="8" class="hole"/>
+    <text x="146" y="14" class="red">旋钮孔 φ16</text>
+    <!-- 按钮 -->
+    <circle cx="50" cy="74" r="9" class="hole"/>
+    <text x="50" y="66" class="red">按钮孔 φ18</text>
+    <!-- LED -->
+    <circle cx="162" cy="74" r="3" class="hole"/>
+    <text x="150" y="66" class="red">LED φ6</text>
+    <!-- 传感器开孔（光感/温湿度/蜂鸣器，示意） -->
+    <circle cx="50" cy="106" r="3" class="hole"/>
+    <circle cx="106" cy="110" r="3" class="hole"/>
+    <circle cx="162" cy="106" r="3" class="hole"/>
+    <text x="40" y="126" class="red">底部 3 个传感器小孔（光感/透气/出声，按实物定位）</text>
+
+    <!-- 尺寸标注 -->
+    <line x1="0" y1="137" x2="193" y2="137" class="dim"/>
+    <text x="82" y="143" class="txt">193</text>
+    <line x1="-5" y1="0" x2="-5" y2="132" class="dim"/>
+    <text x="-5" y="72" class="txt">132</text>
+  </g>
+
+  <!-- ================= 2. 底板 ================= -->
+  <g transform="translate(10,190)">
+    <rect x="0" y="0" width="193" height="95" class="cut"/>
+    <text x="10" y="12" class="txt">底板 193 × 95</text>
+    <line x1="0" y1="101" x2="193" y2="101" class="dim"/>
+    <text x="82" y="107" class="txt">193</text>
+    <line x1="-5" y1="0" x2="-5" y2="95" class="dim"/>
+    <text x="-5" y="52" class="txt">95</text>
+  </g>
+
+  <!-- ================= 3. 三角侧板 x2 ================= -->
+  <g transform="translate(10,315)">
+    <polygon points="0,0 93,93 0,93" class="cut"/>
+    <text x="4" y="88" class="txt">直角边 93</text>
+    <line x1="0" y1="93" x2="93" y2="93" class="dim"/>
+    <text x="40" y="100" class="txt">93</text>
+  </g>
+  <g transform="translate(120,315)">
+    <polygon points="0,0 93,93 0,93" class="cut"/>
+    <text x="4" y="88" class="txt">侧板 ×2</text>
+  </g>
+
+  <!-- ================= 4. 前挡条 ================= -->
+  <g transform="translate(10,440)">
+    <rect x="0" y="0" width="193" height="15" class="cut"/>
+    <text x="10" y="12" class="txt">前挡条 193 × 15</text>
+  </g>
+
+  <!-- ================= 比例尺（校验打印比例） ================= -->
+  <g transform="translate(10,475)">
+    <line x1="0" y1="0" x2="100" y2="0" class="cut"/>
+    <line x1="0" y1="-3" x2="0" y2="3" class="cut"/>
+    <line x1="100" y1="-3" x2="100" y2="3" class="cut"/>
+    <text x="34" y="-3" class="txt">100mm 校验：打印后用尺量，应正好 10cm</text>
+  </g>
+
+  <!-- ================= 组装说明 ================= -->
+  <g transform="translate(10,500)">
+    <text x="0" y="0" class="txt">组装：1) 两块三角侧板竖粘在底板左右两侧；2) 前面板斜搭在两条斜边上固定（约 45°）；</text>
+    <text x="0" y="6" class="txt">3) 前挡条粘在底板前沿防下滑；4) 板子用双面胶贴在前面板内侧，开孔对准后再精修。</text>
+    <text x="0" y="13" class="red">注意：开孔位置为近似值，务必把真板压上去描边校准后再下刀。</text>
+  </g>
+</svg>

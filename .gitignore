@@ -1,0 +1,21 @@
+# Local Arduino toolchain and build output
+/.arduino/
+/.tools/
+/.build/
+/.build_*/
+
+# Python environments, caches and bundles
+.venv/
+__pycache__/
+*.py[cod]
+/Python/build/
+/Python/dist/
+*.exe
+
+# Local settings, logs and project report
+.env
+.env.*
+*.log
+/DeskMatePro_项目总结.docx
+/Python/deskmate_core/wechat_listener.py
+/Python/deskmate_core/wechat_db_patch.py
